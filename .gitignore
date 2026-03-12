@@ -1,0 +1,67 @@
+# ===== STM32CubeIDE / Eclipse =====
+Debug/
+Release/
+*/Debug/
+*/Release/
+.settings/
+*.launch
+
+# ===== Build artifacts =====
+*.o
+*.d
+*.elf
+*.map
+*.hex
+*.bin
+*.list
+*.log
+
+# ==== Backup files ====
+*.bak
+*.tmp
+
+# ===== MATLAB / Simulink caches =====
+**/slprj/
+**/codegen/
+*.slxc
+*.asv
+*.m~
+*.autosave
+
+# ===== acados temp/build =====
+**/build/
+**/c_generated_code/build/
+**/share/
+
+# ===== OS/editor =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ==== acados / MATLAB MEX & binaries ====
+*.mex*
+*.dll
+*.so
+*.dylib
+*.obj
+*.lib
+*.a
+*.pdb
+
+# ==== acados desktop artifacts ====
+**/acados_generated/**/CMakeFiles/*
+**/acados_generated/**/CMakeLists.txt
+**/acados_generated/**/CMakeCache.txt
+**/acados_generated/**/cmake_install.cmake
+**/acados_generated/**/Makefile
+**/acados_generated/**/*.mex*
+**/acados_generated/**/*.m
+**/acados_generated/**/*.dll
+**/acados_generated/**/*.lib
+**/acados_generated/**/*.obj
+**/acados_generated/**/main_FurutaPendulum.c
+**/acados_generated/**/main_sim_FurutaPendulum.c
+
+
+MATLAB/**/*.json
