@@ -24,10 +24,14 @@ In the Project Explorer: mark the project STM32_FurutaPendulum_CM7 or a file wit
 After the first build, there is a linker error and some warnings.
 These disappear after the second compile run.
 
-Core files of acados (and its submodules such as blasfeo, hpipm) have been manually added via links to the project.
-The advantage of this procedure is that inclusion is via a "white list".
-If the acados folder is included as code folder, then individual files must be excluded from build with a "black list" approach.
-The auto-generated acados code for the example application (Furuta pendulum) containing the NMPC controller is in folder `STM32CubeIDE/CM7/Core/USER_CODE/acados_generated`. This code is not included via link but is directly generated via acados MATLAB interface at this location.
+**How acados has been integrated into the STM32CubeIDE Project:**
+- The required core files of **acados** (including its submodules such as **blasfeo** and **hpipm**) have been manually integrated into the STM32CubeIDE project under 'STM32CubeIDE/CM7/third_party/acados'. This integration is implemented using **virtual folders and file links**. The links are defined in the IDE and stored within the project file 'STM32CubeIDE/CM7/.project'. 
+As a result, the files appear in the IDE under `STM32CubeIDE/CM7/third_party/acados`, even though the corresponding folder in the Git repository is empty.
+- This approach ensures that **only the required acados source files are included** in the project (a *whitelist* approach). If the entire `acados` directory were included as a regular source folder instead, individual files would need to be excluded from the build manually (a *blacklist* approach).
+- The **auto-generated acados code** for the example application (Furuta pendulum with an NMPC controller) is located in
+`STM32CubeIDE/CM7/Core/USER_CODE/acados_generated`. Unlike the core acados files, this generated code is **not linked**. It is generated directly in this location using the **acados MATLAB interface**.
+
+
 
 ## Generating the C code of an acados based NMPC controller.
 The code in the folder `MATLAB` shows how the code corresponding to the specific NMPC controller was generated with using the acados MATLAB interface.
