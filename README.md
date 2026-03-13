@@ -1,4 +1,4 @@
-# acados-STM32-NUCEL-H745ZI 
+# acados-STM32-NUCLEO-H745ZI 
 This repository showcases how to deploy embedded nonlinear model predictive control (NMPC) using an STM32 NUCLEO H745ZIQ board with acados and MATLAB interface on Windows 11 on the example of a Furuta pendulum.
 The repository contains the STM32CubeIDE project to build the firmware as well as the MATLAB files to generate the C code of the NMPC that is included in the STM32CubeIDE.
 This repository builds on the project ([acados-STM32](https://github.com/mindThomas/acados-STM32)) by [@mindThomas](https://github.com/mindThomas), which shows an example implementation of acados on an STM32 single core board. (Thanks for sharing!)
